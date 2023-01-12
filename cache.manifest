@@ -1,0 +1,13 @@
+CACHE MANIFEST
+
+# Version 0.0.2
+
+NETWORK: *
+
+CACHE:
+assets/icon.png
+assets/favicon.ico
+style.css
+index.html
+
+FALLBACK:
