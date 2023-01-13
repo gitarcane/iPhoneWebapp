@@ -13,6 +13,8 @@ else {
   document.getElementById('camdiv').style.display = "block"
   document.getElementById('profilediv').style.display = "none"
   document.getElementById('profilepicture').src = localStorage.getItem('profilepicture')
+  document.body.style.background = localStorage.getItem('profilecolor')
+  document.documentElement.style.background = localStorage.getItem('profilecolor')
 }
 
 
@@ -126,5 +128,15 @@ document.getElementById('pictureInput').addEventListener('change', async (event)
 function changecolor() {
 console.log(document.getElementById('profilecolor').value )
 
+if (document.getElementById('profilecolor').value == 'default') {
+  localStorage.setItem('profilecolor', '#8969cf')
+  document.body.style.background = "#8969cf"
+  document.documentElement.style.background = "#8969cf"
+}
+else if (document.getElementById('profilecolor').value == 'red') {
+  localStorage.setItem('profilecolor', '#CD5C5C')
+  document.body.style.background = "#CD5C5C"
+  document.documentElement.style.background = "#CD5C5C"
+}
   
 }
