@@ -134,9 +134,9 @@ if (document.getElementById('profilecolor').value == 'default') {
   document.documentElement.style.background = "#8969cf"
 }
 else if (document.getElementById('profilecolor').value == 'red') {
-  localStorage.setItem('profilecolor', '#CD5C5C')
-  document.body.style.background = "#CD5C5C"
-  document.documentElement.style.background = "#CD5C5C"
+  localStorage.setItem('profilecolor', '#991818')
+  document.body.style.background = "#991818"
+  document.documentElement.style.background = "#991818"
 }
   
 }
