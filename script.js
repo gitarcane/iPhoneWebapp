@@ -134,9 +134,14 @@ if (document.getElementById('profilecolor').value == 'default') {
   document.documentElement.style.background = "#8969cf"
 }
 else if (document.getElementById('profilecolor').value == 'red') {
-  localStorage.setItem('profilecolor', '#991818')
-  document.body.style.background = "#991818"
-  document.documentElement.style.background = "#991818"
+  localStorage.setItem('profilecolor', '#92031c')
+  document.body.style.background = "#92031c"
+  document.documentElement.style.background = "#92031c"
 }
-  
+else if (document.getElementById('profilecolor').value == 'grey') {
+  localStorage.setItem('profilecolor', '#131313')
+  document.body.style.background = "#131313"
+  document.documentElement.style.background = "#131313"
+}
+
 }
