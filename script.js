@@ -10,14 +10,18 @@ else {
   document.getElementById('footer').style.display = "block"
   document.getElementById('logindiv').style.display = "none"
   document.getElementById('loginfooter').style.display = "none"
+  document.getElementById('partydiv').style.display = "none"
+  document.getElementById('chatdiv').style.display = "none"
   document.getElementById('camdiv').style.display = "block"
+  document.getElementById('discoverdiv').style.display = "none"
   document.getElementById('profilediv').style.display = "none"
   document.getElementById('profilepicture').src = localStorage.getItem('profilepicture')
+  document.getElementById('profiletitle').innerHTML = localStorage.getItem('username')
   document.body.style.background = localStorage.getItem('profilecolor')
   document.documentElement.style.background = localStorage.getItem('profilecolor')
 }
 
-
+document.getElementById('camdiv').style.display = "block"
 
 
 
@@ -26,7 +30,11 @@ else {
 function login() {
 //alert('Username: ' + document.getElementById('username').value + '\n' + 'Password: ' + document.getElementById('password').value)
 document.getElementById('logindiv').style.display = "none"
+document.getElementById('partydiv').style.display = "none"
+document.getElementById('chatdiv').style.display = "none"
 document.getElementById('camdiv').style.display = "block"
+document.getElementById('discoverdiv').style.display = "none"
+document.getElementById('profilediv').style.display = "none"
   var video = document.querySelector("#videoElement");
 
 if (navigator.mediaDevices.getUserMedia) {
@@ -43,6 +51,7 @@ if (navigator.mediaDevices.getUserMedia) {
 document.getElementById('footer').style.display = "block"
 document.getElementById('loginfooter').style.display = 'none';
 localStorage.setItem("username", document.getElementById('username').value);
+document.getElementById('profiletitle').innerHTML = localStorage.getItem('username')
 }
 
 
@@ -73,17 +82,46 @@ function deletescr() {
   document.getElementById('screenshot').style.display = 'none';
 }
 
+function openparty() {
+  document.getElementById('partydiv').style.display = "block"
+  document.getElementById('chatdiv').style.display = "none"
+  document.getElementById('camdiv').style.display = "none"
+  document.getElementById('discoverdiv').style.display = "none"
+  document.getElementById('profilediv').style.display = "none"
+}
+
+function openchat() {
+  document.getElementById('partydiv').style.display = "none"
+  document.getElementById('chatdiv').style.display = "block"
+  document.getElementById('camdiv').style.display = "none"
+  document.getElementById('discoverdiv').style.display = "none"
+  document.getElementById('profilediv').style.display = "none"
+}
 
 function opencam() {
+  document.getElementById('partydiv').style.display = "none"
+  document.getElementById('chatdiv').style.display = "none"
   document.getElementById('camdiv').style.display = "block"
+  document.getElementById('discoverdiv').style.display = "none"
+  document.getElementById('profilediv').style.display = "none"
+}
+
+function opendiscover() {
+  document.getElementById('partydiv').style.display = "none"
+  document.getElementById('chatdiv').style.display = "none"
+  document.getElementById('camdiv').style.display = "none"
+  document.getElementById('discoverdiv').style.display = "block"
   document.getElementById('profilediv').style.display = "none"
 }
 
 function openprofile() {
+  document.getElementById('partydiv').style.display = "none"
+  document.getElementById('chatdiv').style.display = "none"
   document.getElementById('camdiv').style.display = "none"
+  document.getElementById('discoverdiv').style.display = "none"
   document.getElementById('profilediv').style.display = "block"
-
 }
+
 
 document.getElementById('pictureInput').addEventListener('change', async (event) => {
   // clean up earliest files
