@@ -130,5 +130,16 @@ video {
 .photo-button:active .circle {
   opacity: 0.5;
 }
+select::-ms-expand {
+  display: none;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+select::after {
+  
 
-
+}

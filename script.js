@@ -122,3 +122,9 @@ document.getElementById('pictureInput').addEventListener('change', async (event)
       console.log('something wrong happened')
     })
 })
+
+function changecolor() {
+console.log(document.getElementById('profilecolor').value )
+
+  
+}

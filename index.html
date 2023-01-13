@@ -76,29 +76,48 @@
         <h1 class="title">Swade</h1>
         <img id="profilepicture" style="z-index: 5; position: absolute; border-radius: 100%; width: 128px; height: 128px; left:50%;  transform: translate(-50%, 0)" src="https://media.istockphoto.com/id/153679287/photo/minneapolis.jpg?s=612x612&w=0&k=20&c=N0MWEuImu2BHEIjlaSyyXFPHdFnqhQbaIKqrCVGWFBU="></img>
         
-        <div style="position: absolute; border-radius: 100%; width: 128px; height: 128px; left:50%;  transform: translate(-50%, 0) color:white; background-color: #272727; width: 256px; height: 128px; border-radius: 22px">
+        <div style="position: absolute;border-radius: 100%;width: 512px;height: 128px;left:50%;transform: translate(-50%, 0);color:white;background-color: #272727;width: 512px;height: 128px;border-radius: 22px">
         <label for="pictureInput" style="margin-left: 25px; display:block; margin:auto;" class= "custom-file-upload">
             <img src="assets/upload.png" style=" 
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 70%;
   transform: translate(-50%, -50%);
   width: 32px; 
   height: 32px;"
   ></img> <center style="color:white; position: absolute;
   top: 50%;
-  left: 55%;
+  left: 80%;
   width: 20px;
   transform: translate(-50%, -50%);">Upload Image</center>
         </label>
         <input type="file" id="pictureInput" style="display: none;"></input>
+        <select style="position: absolute;
+            top: 50%;
+            left: 20%;
+            transform: translate(-50%, -50%); width:78px; text-align:center; padding:10px; background-color: #fff; border-radius: 22px "name="Profile Color" id="profilecolor" onchange="changecolor()">
+                <option value="default">Default</option>
+                <option value="red">Red</option>
+                <option value="white">White</option>
+              </select>
         </div>
-    </div>
+
+        <!--<div style="position: absolute; width: 128px; height: 128px; left:36.5%;  transform: translate(-50%, 0) color:white; background-color: #272727; width: 256px; height: 128px; border-radius: 22px">
+            <select style="position: absolute;
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%, -50%); width:78px; text-align:center; padding:10px; background-color: #fff; border-radius: 22px "name="Profile Color" id="profilecolor" onchange="changecolor()">
+                <option value="default">Default</option>
+                <option value="red">Red</option>
+                <option value="white">White</option>
+              </select>
+            </div>
+    </div>-->
 
 
     <!--Footer-->
 
-
+</div>
 <div id="footer" class="footer">
 <img src="assets/user.png" style=" width: 64px; height: 64px;"></img>
 <img src="assets/user.png" style=" width: 64px; height: 64px;"></img>
@@ -107,7 +126,6 @@
 <img onclick="openprofile()"  src="assets/user.png" style=" width: 64px; height: 64px;"></img>
 </div>
 
-</div>
   
 
     <!--Scripts-->
