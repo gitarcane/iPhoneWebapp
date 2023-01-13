@@ -1,18 +1,25 @@
 html, body {
     margin: 0;
-    height: 100%;
-    background-color: #8158da;
+    height: 95%;
+    font-family: system-ui;
+    background-color: #8969cf;
 }
 
-
+img {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
 .title {
-    text-shadow: 0 0 calc(1px + 1.5vw) #ffffff;
+    
     color:white;
-    font: bold 3vw Arial, Helvetica, sans-serif;
+    
     font-size:calc(40px + 1.2vw);
     position: relative;
     padding-top: calc(10px + 1.5vw);
-    padding-bottom: calc(5px + 1.1vw);
     text-align: center;
 }
 .footertext {
@@ -21,10 +28,8 @@ html, body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-a {
-    text-shadow: 0 0 3px #ffffff;
+a {    
     color:white;
-    font: 1vw Helvetica;
     font-size:calc(20px + 0.4vw);
     position: relative;
     padding: top 20px;
@@ -41,9 +46,89 @@ button {
     text-shadow: 0 0 2px #ffffff;
     color:white;
     font: bold 3em Arial, Helvetica, sans-serif;
-    position: absolute;
-    bottom: 30%;
-    left: 50%;
-    transform: translate(-50%, +50%);
+    position: relative;
     text-align: center;
 }
+input {
+  width: 30%;
+  min-width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+#container {
+	margin: 0px auto;
+	width: 500px;
+	height: 562.5px;
+	border: 10px #fff solid;
+  overflow: hidden;
+}
+#videoElement {
+  height: 563px;
+  width: 750px;
+
+}
+
+video::-webkit-media-controls {
+  display: none;
+}
+video {
+  pointer-events: none;
+}
+.footer {
+  position: fixed;
+  padding: 10px;
+  height:64px;
+  min-width: 400px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-top-left-radius: 44px;
+  border-top-right-radius: 44px;
+  bottom: 0;
+  width: 30%;
+  background-color: #272727;
+  color: white;
+  text-align: center;
+}
+
+
+.photo-button {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+.circle {
+  position: absolute;
+  top: 12%;
+  left: 12%;
+  bottom: 12%;
+  right: 12%;
+  border-radius: 100%;
+  background-color: #ffffff;
+  opacity: 0;
+}
+.ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  
+  border-radius: 100%;
+  border: 0.5em solid #ffffff;
+  opacity: 0.8;
+}
+.photo-button .circle, .photo-button .ring {
+  transition: all 0.25s;
+}
+.photo-button:hover .circle {
+  opacity: 1;
+}
+.photo-button:active .ring {
+  opacity: 1;
+}
+.photo-button:active .circle {
+  opacity: 0.5;
+}
+
+
