@@ -1,8 +1,20 @@
+document.getElementById('partydiv').style.display = "none"
+document.getElementById('chatdiv').style.display = "none"
+document.getElementById('discoverdiv').style.display = "none"
+document.getElementById('profilediv').style.display = "none"
+document.getElementById('camdiv').style.display = "none"
+
+
 if (localStorage.getItem("username") == null) {
-  document.getElementById('camdiv').style.display = "none"
   //document.getElementById('delbutton').style.display = "none"
   document.getElementById('footer').style.display = "none"
+    document.getElementById('logindiv').style.display = "block"
+  document.getElementById('loginfooter').style.display = "block"
+  document.getElementById('partydiv').style.display = "none"
+  document.getElementById('chatdiv').style.display = "none"
+  document.getElementById('discoverdiv').style.display = "none"
   document.getElementById('profilediv').style.display = "none"
+  document.getElementById('camdiv').style.display = "none"
 }
 else {
 
@@ -21,7 +33,6 @@ else {
   document.documentElement.style.background = localStorage.getItem('profilecolor')
 }
 
-document.getElementById('camdiv').style.display = "block"
 
 
 
